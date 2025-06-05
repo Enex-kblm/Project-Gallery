@@ -97,6 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 1.75rem;
+    padding-left: 1rem;
 }
 
 h2 {
@@ -134,7 +135,8 @@ header {
 .controls {
     display: flex;
     gap: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 0.3em;
+    padding-right: 1rem;
     flex-wrap: wrap;
 }
 
