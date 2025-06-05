@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1>Project Gallery</h1>
+                <div class="controls">
+                    <button id="darkModeToggle" aria-label="Toggle dark mode">
+                        <span class="icon-light">🌓</span>
+                        <span class="icon-dark">☀️</span>
+                    </button>
+                    <div class="search-container">
+                        <input type="search" id="searchBar" placeholder="Search projects...">
+                        <div class="search-icon">🔍</div>
+                    </div>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="portfolio">Portfolio</option>
+                        <option value="blog">Blog</option>
+                        <option value="tool">Tool</option>
+                        <option value="app">Application</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="projects-header">
+                <h2>My Latest Work</h2>
+                <p class="projects-count"><span id="projectCount">0</span> projects</p>
+            </div>
+            
+            <div class="projects-grid" id="projectsContainer">
+                <!-- Projects will be dynamically inserted here -->
+            </div>
+            
+            <div id="noResults" class="no-results hidden">
+                <h3>No projects found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Created with <span class="heart">❤️</span> by Julian</p>
+            <p class="copyright">© 2025 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
