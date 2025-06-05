@@ -2,11 +2,11 @@
   "projects": [
     {
       "id": 1,
-      "title": "Personal Portfolio",
-      "description": "A sleek, modern portfolio website showcasing my skills, projects, and professional experience with interactive elements and a contact form.",
-      "image": "https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "url": "https://example.com/portfolio",
-      "category": "portfolio",
+      "title": "MH-DDoS",
+      "description": "A customized version of the MH-DDoS tool originally developed by matrixTM, enhanced with a web-based user interface for easier interaction. This interface simplifies the configuration and execution of stress tests, making the tool more accessible for educational and testing purposes.",
+      "image": "https://raw.githubusercontent.com/Enex-kblm/MH-DDoS/main/files/preview.png",
+      "url": "https://github.com/Enex-kblm/MH-DDoS.git",
+      "category": "tool",
       "date": "2024-01-15"
     },
     {
