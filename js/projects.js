@@ -48,6 +48,15 @@ export async function loadProjects() {
                 url: "https://qr-code-generator-liart-ten.vercel.app/",
                 category: "website",
                 date: "2025-06-01"
+            },
+            {
+                id: 6,
+                title: "Choice picker",
+                description: "A lightweight and intuitive web tool that randomly selects from a list of user-defined choices. Perfect for making quick, unbiased decisions in any situation where multiple options are available.",
+                image: "https://raw.githubusercontent.com/Enex-kblm/choice_picker/main/Screenshot%202025-06-06%20100734.png",
+                url: "https://enex-kblm.github.io/choice_picker/",
+                category: "website",
+                date: "2025-06-01"
             }
         ];
         
