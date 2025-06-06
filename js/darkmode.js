@@ -1,6 +1,6 @@
 // Initialize dark mode functionality
-export function initDarkMode() {
-    const darkModeToggle = document.getElementById('darkModeToggle');
+export function initDarkMode(selector = '#darkModeToggle') {
+    const darkModeToggle = document.querySelector(selector);
     const body = document.body;
     
     // Check for saved preference

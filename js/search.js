@@ -2,8 +2,8 @@ import { renderProjects } from './projects.js';
 import { updateProjectCount } from './main.js';
 
 // Initialize search functionality
-export function initSearch(projects) {
-    const searchBar = document.getElementById('searchBar');
+export function initSearch(projects, elementId = '#searchBar') {
+    const searchBar = document.querySelector(elementId);
     
     if (!searchBar) {
         console.error('Search bar element not found');
@@ -58,3 +58,19 @@ function logSearch(term, resultCount) {
     // In a real application, this would send data to an analytics service
     console.log(`Search: "${term}" - ${resultCount} results`);
 }
+
+// Toggle search input on small screens
+document.addEventListener("DOMContentLoaded", () => {
+    const searchContainer = document.querySelector(".search-container");
+    const searchToggle = document.getElementById("searchToggle");
+
+    if (searchToggle && searchContainer) {
+        searchToggle.addEventListener("click", () => {
+            searchContainer.classList.toggle("active");
+            const input = document.getElementById("searchBar");
+            if (input && searchContainer.classList.contains("active")) {
+                input.focus();
+            }
+        });
+    }
+});

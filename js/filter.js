@@ -2,8 +2,8 @@ import { renderProjects } from './projects.js';
 import { updateProjectCount } from './main.js';
 
 // Initialize filter functionality
-export function initFilter(projects) {
-    const categoryFilter = document.getElementById('categoryFilter');
+export function initFilter(projects, elementId = '#categoryFilter') {
+    const categoryFilter = document.querySelector(elementId);
     
     if (!categoryFilter) {
         console.error('Category filter element not found');
@@ -26,7 +26,11 @@ function populateCategoryFilter(selectElement, projects) {
     const categories = [...new Set(projects.map(project => project.category))];
     
     // Keep the "All Categories" option
-    const allOption = selectElement.options[0];
+    const allOption = selectElement.querySelector('option[value="all"]') || document.createElement('option');
+    if (!allOption.value) {
+        allOption.value = 'all';
+        allOption.textContent = 'All Categories';
+    }
     
     // Clear existing options except the first one
     selectElement.innerHTML = '';

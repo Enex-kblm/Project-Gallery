@@ -391,7 +391,7 @@ footer p {
 /* Responsive design */
 @media (min-width: 768px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
     
     .nav-container {
@@ -449,4 +449,173 @@ footer p {
 .description-container {
     position: relative;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+    .search-container {
+        position: relative;
+        flex: none;
+        width: auto;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    #searchBar {
+        display: none;
+        width: 100%;
+        max-width: 180px;
+        padding: 0.4rem 0.75rem;
+    }
+
+    .search-container.active #searchBar {
+        display: block;
+    }
+
+    .search-icon {
+        cursor: pointer;
+        position: static;
+        transform: none;
+        color: var(--text);
+        pointer-events: auto;
+
+        /* Border styling here */
+        border: 1px solid var(--border);
+        padding: 0.5rem 0.75rem;
+        border-radius: 8px;
+        background: var(--card-bg);
+        transition: background-color var(--transition-fast);
+    }
+
+    .search-icon:hover {
+        background: var(--primary-light);
+        color: white;
+        border-color: var(--primary-light);
+    }
+}
+
+.top-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+@media (max-width: 576px) {
+    .controls {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top-buttons {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .search-container {
+        flex: none;
+    }
+
+    #categoryFilter {
+        flex: none;
+        max-width: 140px;
+    }
+}/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text);
+    padding: 0.5rem;
+    margin-left: auto; /* Posisi di pojok kanan */
+    z-index: 1001;
+}
+
+/* Mobile Menu Layout */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--card-bg);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    box-shadow: var(--shadow-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.mobile-menu-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.mobile-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.mobile-search {
+    position: relative;
+}
+
+.mobile-search .search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+.mobile-search input {
+    width: 100%;
+    padding-left: 2.5rem;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.mobile-menu-overlay.active {
+    display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .top-buttons, #categoryFilter {
+        display: none;
+    }
 }

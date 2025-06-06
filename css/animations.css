@@ -141,3 +141,21 @@ body {
     background-color: var(--primary-color);
     color: white;
 }
+/* Mobile menu animations */
+@keyframes slideIn {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        right: 0;
+    }
+    to {
+        right: -100%;
+    }
+}
