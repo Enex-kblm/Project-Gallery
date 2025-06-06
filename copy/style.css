@@ -528,7 +528,6 @@ footer p {
     background: none;
     border: none;
     font-size: 1.5rem;
-    margin-top: -2.8rem;
     cursor: pointer;
     color: var(--text);
     padding: 0.5rem;
@@ -554,14 +553,6 @@ footer p {
 
 .mobile-menu.active {
     right: 0;
-}
-
-.mobile-menu-overlay {
-    display: none;
-}
-
-.mobile-menu-overlay.active {
-    display: block;
 }
 
 .mobile-menu-header {

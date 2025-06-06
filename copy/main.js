@@ -45,47 +45,8 @@ function showErrorMessage(message) {
     }
 }
 
-// Mobile menu toggle functionality
-function initMobileMenu() {
-    const menuToggle = document.getElementById('mobileMenuToggle');
-    const menu = document.getElementById('mobileMenu');
-    const menuClose = document.getElementById('mobileMenuClose');
-    const menuOverlay = document.getElementById('mobileMenuOverlay');
-
-    if (!menuToggle || !menu || !menuClose || !menuOverlay) {
-        console.warn('Mobile menu elements not found. Skipping mobile menu initialization.');
-        return;
-    }
-
-    // Open mobile menu
-    menuToggle.addEventListener('click', () => {
-        menu.classList.add('active');
-        menuOverlay.classList.add('active');
-        // prevent body scroll when menu is open
-        document.body.style.overflow = 'hidden';
-    });
-
-    // Close mobile menu on close button click
-    menuClose.addEventListener('click', () => {
-        menu.classList.remove('active');
-        menuOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    });
-
-    // Close mobile menu on overlay click
-    menuOverlay.addEventListener('click', () => {
-        menu.classList.remove('active');
-        menuOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    });
-}
-
 // Initialize the app when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    initApp();
-    initMobileMenu();
-});
+document.addEventListener('DOMContentLoaded', initApp);
 
 // Export utility functions for use in other modules
 export { updateProjectCount, showErrorMessage };
-
