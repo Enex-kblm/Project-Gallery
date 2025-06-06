@@ -57,6 +57,15 @@ export async function loadProjects() {
                 url: "https://enex-kblm.github.io/choice_picker/",
                 category: "website",
                 date: "2025-06-01"
+            },
+            {
+                id: 7,
+                title: "Hand tracking game",
+                description: "Hand Tracking Game is a Python-based program where players use their hands to catch falling objects from the top of the screen. The goal is to collect as many objects as possible. As the player catches more objects at once, the falling speed of subsequent objects increases, making the game progressively more challenging. If an object is missed and falls without being caught, the game ends.",
+                image: "https://raw.githubusercontent.com/Enex-kblm/tracking_game/main/PYtracking%20game.png",
+                url: "https://github.com/Enex-kblm/tracking_game.git",
+                category: "python",
+                date: "2025-06-01"
             }
         ];
         
