@@ -85,7 +85,15 @@ export async function loadProjects() {
                 category: "website",
                 date: "2025-06-01"
             },
-
+            {
+                id: 10,
+                title: "Check profesi",
+                description: "Future Job Predictor is a fun and interactive website that predicts your potential future profession based on your input. By analyzing user responses or preferences, the site provides a playful forecast of what job you might have in the future. It's designed for entertainment, inspiration, and a bit of self-reflection.",
+                image: "https://raw.githubusercontent.com/Enex-kblm/Check-Profesi/main/check-profesi.png",
+                url: "https://check-profesi.vercel.app/",
+                category: "website",
+                date: "2025-06-01"
+            },
         ];
         
         // Render the projects
