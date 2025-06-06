@@ -15,47 +15,38 @@ export async function loadProjects() {
             },
             {
                 id: 2,
-                title: "MH-DDoS",
+                title: "Julian-CF",
                 description: "A customized version of the MH-DDoS tool originally developed by matrixTM, enhanced with a web-based user interface for easier interaction. This interface simplifies the configuration and execution of stress tests, making the tool more accessible for educational and testing purposes.",
-                image: "https://raw.githubusercontent.com/Enex-kblm/MH-DDoS/main/files/preview.png",
-                url: "https://github.com/Enex-kblm/MH-DDoS.git",
-                category: "tool",
+                image: "https://raw.githubusercontent.com/Enex-kblm/julian-cf/refs/heads/main/image/thumb.webp",
+                url: "https://github.com/Enex-kblm/julian-cf.git",
+                category: "wabot",
                 date: "2025-06-01"
             },
             {
                 id: 3,
-                title: "MH-DDoS",
+                title: "DiG-L",
                 description: "A customized version of the MH-DDoS tool originally developed by matrixTM, enhanced with a web-based user interface for easier interaction. This interface simplifies the configuration and execution of stress tests, making the tool more accessible for educational and testing purposes.",
-                image: "https://raw.githubusercontent.com/Enex-kblm/MH-DDoS/main/files/preview.png",
-                url: "https://github.com/Enex-kblm/MH-DDoS.git",
-                category: "tool",
+                image: "https://raw.githubusercontent.com/Enex-kblm/DiG-L-wabot/main/DiG-L.png",
+                url: "https://github.com/Enex-kblm/DiG-L-wabot.git",
+                category: "wabot",
                 date: "2025-06-01"
             },
             {
                 id: 4,
-                title: "MH-DDoS",
+                title: "Hitung usia",
                 description: "A customized version of the MH-DDoS tool originally developed by matrixTM, enhanced with a web-based user interface for easier interaction. This interface simplifies the configuration and execution of stress tests, making the tool more accessible for educational and testing purposes.",
-                image: "https://raw.githubusercontent.com/Enex-kblm/MH-DDoS/main/files/preview.png",
-                url: "https://github.com/Enex-kblm/MH-DDoS.git",
-                category: "tool",
+                image: "https://raw.githubusercontent.com/Enex-kblm/hitung-usia-kamu/main/Screenshot%202025-06-06%20080031.png",
+                url: "https://enex-kblm.github.io/hitung-usia-kamu/",
+                category: "website",
                 date: "2025-06-01"
             },
             {
                 id: 5,
-                title: "MH-DDoS",
+                title: "QRcode generator",
                 description: "A customized version of the MH-DDoS tool originally developed by matrixTM, enhanced with a web-based user interface for easier interaction. This interface simplifies the configuration and execution of stress tests, making the tool more accessible for educational and testing purposes.",
-                image: "https://raw.githubusercontent.com/Enex-kblm/MH-DDoS/main/files/preview.png",
-                url: "https://github.com/Enex-kblm/MH-DDoS.git",
-                category: "tool",
-                date: "2025-06-01"
-            },
-            { 
-                id: 6,
-                title: "MH-DDoS",
-                description: "A customized version of the MH-DDoS tool originally developed by matrixTM, enhanced with a web-based user interface for easier interaction. This interface simplifies the configuration and execution of stress tests, making the tool more accessible for educational and testing purposes.",
-                image: "https://raw.githubusercontent.com/Enex-kblm/MH-DDoS/main/files/preview.png",
-                url: "https://github.com/Enex-kblm/MH-DDoS.git",
-                category: "tool",
+                image: "https://raw.githubusercontent.com/Enex-kblm/QRcode-generator/main/Screenshot%202025-06-06%20080350.png",
+                url: "https://qr-code-generator-liart-ten.vercel.app/",
+                category: "website",
                 date: "2025-06-01"
             }
         ];
