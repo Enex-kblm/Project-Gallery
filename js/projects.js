@@ -34,7 +34,7 @@ export async function loadProjects() {
             {
                 id: 4,
                 title: "Hitung usia",
-                description: "A simple and interactive age calculator website that lets users find out how long they've been alive. It calculates a person’s current age based on their birth date and displays the result in years, months, and days, making it a fun and informative tool for personal use.",
+                description: "A simple and interactive age calculator website that lets users find out how long they've been alive. It calculates a person's current age based on their birth date and displays the result in years, months, and days, making it a fun and informative tool for personal use.",
                 image: "https://raw.githubusercontent.com/Enex-kblm/hitung-usia-kamu/main/Screenshot%202025-06-06%20080031.png",
                 url: "https://enex-kblm.github.io/hitung-usia-kamu/",
                 category: "website",
@@ -64,6 +64,7 @@ export async function loadProjects() {
 
 // Create HTML for a project card
 export function createProjectCard(project) {
+    const uniqueId = `description-${project.id}`;
     return `
         <div class="project-card" data-id="${project.id}" data-category="${project.category}">
             <img class="project-image" src="${project.image}" alt="${project.title}">
@@ -73,7 +74,10 @@ export function createProjectCard(project) {
                     <span class="project-date">${formatDate(project.date)}</span>
                 </div>
                 <h3 class="project-title">${project.title}</h3>
-                <p class="project-description">${project.description}</p>
+                <div class="description-container">
+                    <p id="${uniqueId}" class="project-description truncated">${project.description}</p>
+                    <button class="show-more-btn" data-target="${uniqueId}">Show more</button>
+                </div>
                 <div class="project-actions">
                     <a href="${project.url}" class="view-button" target="_blank" rel="noopener noreferrer">View Project</a>
                 </div>
@@ -96,8 +100,28 @@ export function renderProjects(projectsArray) {
         container.innerHTML = projectsArray
             .map(project => createProjectCard(project))
             .join('');
+            
+        // Add event listeners for show more/less buttons
+        const showMoreButtons = container.querySelectorAll('.show-more-btn');
+        showMoreButtons.forEach(button => {
+            button.addEventListener('click', toggleDescription);
+        });
+            
         if (noResults) noResults.classList.add('hidden');
     }
+}
+
+// Toggle description expansion
+function toggleDescription(event) {
+    const button = event.target;
+    const targetId = button.getAttribute('data-target');
+    const description = document.getElementById(targetId);
+    
+    if (!description) return;
+    
+    const isExpanded = !description.classList.contains('truncated');
+    description.classList.toggle('truncated');
+    button.textContent = isExpanded ? 'Show more' : 'Show less';
 }
 
 function formatDate(dateString) {

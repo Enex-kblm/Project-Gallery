@@ -1,5 +1,4 @@
 :root {
-    /* Color system */
     --primary-color: #2563eb;
     --primary-dark: #1d4ed8;
     --primary-light: #3b82f6;
@@ -308,11 +307,16 @@ input:focus, select:focus, button:focus {
 .project-description {
     margin: 0 0 1.25rem;
     color: var(--text-secondary);
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
     overflow: hidden;
+    transition: max-height var(--transition-normal) ease;
+    position: relative;
     flex: 1;
+}
+
+.project-description.truncated {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .project-meta { 
@@ -417,4 +421,32 @@ footer p {
     .projects-grid {
         gap: 1.5rem;
     }
+}
+
+.show-more-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    padding: 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: color var(--transition-fast);
+}
+
+.show-more-btn:hover {
+    color: var(--primary-dark);
+    background: none;
+    border: none;
+}
+
+.show-more-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.description-container {
+    position: relative;
+    margin-bottom: 1rem;
 }
