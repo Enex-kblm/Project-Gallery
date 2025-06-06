@@ -16,7 +16,7 @@ export async function loadProjects() {
             {
                 id: 2,
                 title: "Julian-CF",
-                description: "A customized version of the MH-DDoS tool originally developed by matrixTM, enhanced with a web-based user interface for easier interaction. This interface simplifies the configuration and execution of stress tests, making the tool more accessible for educational and testing purposes.",
+                description: "A multifunctional WhatsApp bot designed to assist with daily activities. It automates routine tasks, provides quick access to useful tools, and improves productivity through an easy-to-use chat-based interface. Ideal for personal use or lightweight task management.",
                 image: "https://raw.githubusercontent.com/Enex-kblm/julian-cf/refs/heads/main/image/thumb.webp",
                 url: "https://github.com/Enex-kblm/julian-cf.git",
                 category: "wabot",
@@ -25,7 +25,7 @@ export async function loadProjects() {
             {
                 id: 3,
                 title: "DiG-L",
-                description: "A customized version of the MH-DDoS tool originally developed by matrixTM, enhanced with a web-based user interface for easier interaction. This interface simplifies the configuration and execution of stress tests, making the tool more accessible for educational and testing purposes.",
+                description: "Dig-L is a WhatsApp-based penetration testing assistant that offers a range of cybersecurity tools accessible via chat commands. It enables users to perform basic recon, information gathering, and network testing directly through WhatsApp, making it a lightweight and mobile-friendly companion for ethical hackers and security enthusiasts.",
                 image: "https://raw.githubusercontent.com/Enex-kblm/DiG-L-wabot/main/DiG-L.png",
                 url: "https://github.com/Enex-kblm/DiG-L-wabot.git",
                 category: "wabot",
@@ -34,7 +34,7 @@ export async function loadProjects() {
             {
                 id: 4,
                 title: "Hitung usia",
-                description: "A customized version of the MH-DDoS tool originally developed by matrixTM, enhanced with a web-based user interface for easier interaction. This interface simplifies the configuration and execution of stress tests, making the tool more accessible for educational and testing purposes.",
+                description: "A simple and interactive age calculator website that lets users find out how long they've been alive. It calculates a person’s current age based on their birth date and displays the result in years, months, and days, making it a fun and informative tool for personal use.",
                 image: "https://raw.githubusercontent.com/Enex-kblm/hitung-usia-kamu/main/Screenshot%202025-06-06%20080031.png",
                 url: "https://enex-kblm.github.io/hitung-usia-kamu/",
                 category: "website",
@@ -43,7 +43,7 @@ export async function loadProjects() {
             {
                 id: 5,
                 title: "QRcode generator",
-                description: "A customized version of the MH-DDoS tool originally developed by matrixTM, enhanced with a web-based user interface for easier interaction. This interface simplifies the configuration and execution of stress tests, making the tool more accessible for educational and testing purposes.",
+                description: "A web-based QR code generator that allows users to instantly create QR codes from any URL or plain text. Designed for simplicity and speed, this tool makes sharing links or information more efficient and accessible across devices.",
                 image: "https://raw.githubusercontent.com/Enex-kblm/QRcode-generator/main/Screenshot%202025-06-06%20080350.png",
                 url: "https://qr-code-generator-liart-ten.vercel.app/",
                 category: "website",
@@ -100,7 +100,6 @@ export function renderProjects(projectsArray) {
     }
 }
 
-// Format date to a more readable format
 function formatDate(dateString) {
     const options = { year: 'numeric', month: 'short' };
     return new Date(dateString).toLocaleDateString(undefined, options);
