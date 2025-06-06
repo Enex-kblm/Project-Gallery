@@ -66,7 +66,26 @@ export async function loadProjects() {
                 url: "https://github.com/Enex-kblm/tracking_game.git",
                 category: "python",
                 date: "2025-06-01"
-            }
+            },
+            {
+                id: 8,
+                title: "Chat with python",
+                description: "Python Chat Program (Tkinter-Based) is a simple graphical chat interface built using the Tkinter library in Python. The application allows users to send messages and receive replies. However, it has a key limitation — the chatbot only responds based on predefined messages stored in self.responses, making it unable to handle dynamic or unknown inputs.",
+                image: "https://raw.githubusercontent.com/Enex-kblm/Chat-With-Python/main/chat%20with%20python.png",
+                url: "https://github.com/Enex-kblm/Chat-With-Python.git",
+                category: "python",
+                date: "2025-06-01"
+            },
+            {
+                id: 9,
+                title: "Device information",
+                description: "Device Information is a web-based tool that provides users with essential information about their device. It can detect and display the user's IP address, operating system version, and approximate geographic location. This tool is useful for quick diagnostics, security awareness, or general system information checking.",
+                image: "https://raw.githubusercontent.com/Enex-kblm/Device-Information/main/Screenshot%202025-06-06%20105457.png",
+                url: "https://enex-kblm.github.io/Device-Information/",
+                category: "website",
+                date: "2025-06-01"
+            },
+
         ];
         
         // Render the projects
