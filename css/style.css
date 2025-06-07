@@ -201,7 +201,7 @@ input:focus, select:focus, button:focus {
     pointer-events: none;
 }
 
-#darkModeToggle {
+#darkModeToggle, #darkModeToggleMobile {
     padding: 0.5rem;
     width: 40px;
     height: 40px;
@@ -521,21 +521,41 @@ footer p {
         flex: none;
         max-width: 140px;
     }
-}/* Mobile Menu Toggle Button */
-/* Mobile Menu */
+}
+
+/* Mobile Menu Toggle Button */
 .mobile-menu-toggle {
     display: none;
     background: none;
     border: none;
+    margin-top: -2.6rem;
+    right: 0.8rem;
     font-size: 1.5rem;
-    margin-top: -2.8rem;
     cursor: pointer;
     color: var(--text);
     padding: 0.5rem;
     margin-left: auto;
     z-index: 1001;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
 }
 
+.mobile-menu-toggle:hover {
+    background: var(--primary-light);
+    color: white;
+    border-color: var(--primary-light);
+}
+
+.mobile-menu-toggle:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Mobile Menu */
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -556,14 +576,6 @@ footer p {
     right: 0;
 }
 
-.mobile-menu-overlay {
-    display: none;
-}
-
-.mobile-menu-overlay.active {
-    display: block;
-}
-
 .mobile-menu-header {
     display: flex;
     justify-content: flex-end;
@@ -577,6 +589,18 @@ footer p {
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--text);
+    padding: 0.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu-close:hover {
+    background: var(--primary-light);
+    color: white;
+    border-color: var(--primary-light);
 }
 
 .mobile-controls {
@@ -624,9 +648,34 @@ footer p {
     display: block;
 }
 
+/* Mobile dark mode button styling */
+#darkModeToggleMobile {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+#darkModeToggleMobile .icon-light::before {
+    content: "🌓 Dark Mode";
+}
+
+#darkModeToggleMobile .icon-dark::before {
+    content: "☀️ Light Mode";
+}
+
+.dark-mode #darkModeToggleMobile .icon-light::before {
+    content: "🌓 Dark Mode";
+}
+
+.dark-mode #darkModeToggleMobile .icon-dark::before {
+    content: "☀️ Light Mode";
+}
+
 @media (max-width: 576px) {
     .mobile-menu-toggle {
-        display: block;
+        display: flex;
     }
     
     .top-buttons, #categoryFilter {

@@ -10,10 +10,18 @@ async function initApp() {
         // Load projects data
         const projects = await loadProjects();
         
-        // Initialize features
-        initDarkMode();
-        initSearch(projects);
-        initFilter(projects);
+        // Initialize features for both desktop and mobile
+        initDarkMode('#darkModeToggle');
+        initDarkMode('#darkModeToggleMobile'); // Mobile dark mode toggle
+        
+        initSearch(projects, '#searchBar');
+        initSearch(projects, '#searchBarMobile'); // Mobile search
+        
+        initFilter(projects, '#categoryFilter');
+        initFilter(projects, '#categoryFilterMobile'); // Mobile filter
+        
+        // Initialize mobile menu
+        initMobileMenu();
         
         // Update project count
         updateProjectCount(projects.length);
@@ -22,6 +30,63 @@ async function initApp() {
     } catch (error) {
         console.error('Failed to initialize application:', error);
         showErrorMessage('Failed to load projects. Please try again later.');
+    }
+}
+
+// Mobile menu toggle functionality
+function initMobileMenu() {
+    const menuToggle = document.getElementById('mobileMenuToggle');
+    const menu = document.getElementById('mobileMenu');
+    const menuClose = document.getElementById('mobileMenuClose');
+    const menuOverlay = document.getElementById('mobileMenuOverlay');
+
+    if (!menuToggle || !menu || !menuClose || !menuOverlay) {
+        console.warn('Mobile menu elements not found. Skipping mobile menu initialization.');
+        return;
+    }
+
+    // Open mobile menu
+    menuToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        openMobileMenu();
+    });
+
+    // Close mobile menu on close button click
+    menuClose.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        closeMobileMenu();
+    });
+
+    // Close mobile menu on overlay click
+    menuOverlay.addEventListener('click', () => {
+        closeMobileMenu();
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
+
+    function openMobileMenu() {
+        menu.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        
+        // Focus management for accessibility
+        menuClose.focus();
+    }
+
+    function closeMobileMenu() {
+        menu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        
+        // Return focus to menu toggle
+        menuToggle.focus();
     }
 }
 
@@ -46,7 +111,9 @@ function showErrorMessage(message) {
 }
 
 // Initialize the app when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', initApp);
+document.addEventListener('DOMContentLoaded', () => {
+    initApp();
+});
 
 // Export utility functions for use in other modules
 export { updateProjectCount, showErrorMessage };
