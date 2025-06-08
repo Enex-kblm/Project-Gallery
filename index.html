@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/search-improvements.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
 <body>
@@ -28,11 +29,18 @@
                             <span class="icon-dark">☀️</span>
                         </button>
                         <div class="search-container">
-                            <div class="search-icon" id="searchToggle">🔍</div>
-                            <input type="search" id="searchBar" placeholder="Search projects...">
+                            <input type="search" 
+                                   id="searchBar" 
+                                   placeholder="Search projects..."
+                                   aria-label="Search projects"
+                                   autocomplete="off"
+                                   autocorrect="off"
+                                   autocapitalize="off"
+                                   spellcheck="false">
+                            <div class="search-icon" aria-hidden="true">🔍</div>
                         </div>
                     </div>
-                    <select id="categoryFilter">
+                    <select id="categoryFilter" aria-label="Filter by category">
                         <option value="all">All Categories</option>
                         <!-- Options akan diisi oleh JavaScript -->
                     </select>
@@ -42,9 +50,10 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
         <div class="mobile-menu-header">
-            <button id="mobileMenuClose" class="mobile-menu-close">✕</button>
+            <h2 id="mobile-menu-title" class="sr-only">Mobile Menu</h2>
+            <button id="mobileMenuClose" class="mobile-menu-close" aria-label="Close mobile menu">✕</button>
         </div>
         <div class="mobile-controls">
             <button id="darkModeToggleMobile" class="mobile-dark-mode" aria-label="Toggle dark mode">
@@ -52,31 +61,40 @@
                 <span class="icon-dark">☀️</span>
             </button>
             
-            <div class="mobile-search">
-                <div class="search-icon">🔍</div>
-                <input type="search" id="searchBarMobile" placeholder="Search projects...">
+            <div class="search-container">
+                <div class="search-icon" aria-hidden="true">🔍</div>
+                <input type="search" 
+                       id="searchBarMobile" 
+                       placeholder="Search projects..."
+                       aria-label="Search projects"
+                       autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       spellcheck="false">
             </div>
             
-            <select id="categoryFilterMobile" class="mobile-category-filter">
+            <select id="categoryFilterMobile" class="mobile-category-filter" aria-label="Filter by category">
                 <option value="all">All Categories</option>
                 <!-- Options akan diisi oleh JavaScript -->
             </select>
         </div>
     </div>
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay" aria-hidden="true"></div>
 
     <main>
         <div class="container">
             <div class="projects-header">
                 <h2>My Latest Work</h2>
-                <p class="projects-count"><span id="projectCount">0</span> projects</p>
+                <p class="projects-count">
+                    <span id="projectCount" aria-live="polite">0</span> projects
+                </p>
             </div>
             
-            <div class="projects-grid" id="projectsContainer">
+            <div class="projects-grid" id="projectsContainer" role="grid" aria-label="Project gallery">
                 <!-- Projects akan dimuat oleh JavaScript -->
             </div>
             
-            <div id="noResults" class="no-results hidden">
+            <div id="noResults" class="no-results hidden" role="status" aria-live="polite">
                 <h3>No projects found</h3>
                 <p>Try adjusting your search or filter criteria</p>
             </div>
@@ -85,7 +103,7 @@
 
     <footer>
         <div class="container">
-            <p>Created with <span class="heart">❤️</span> by Julian</p>
+            <p>Created with <span class="heart" aria-label="love">❤️</span> by Julian</p>
             <p class="copyright">© 2025 All Rights Reserved</p>
         </div>
     </footer>
