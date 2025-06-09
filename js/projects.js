@@ -94,6 +94,15 @@ export async function loadProjects() {
                 category: "website",
                 date: "2025-06-01"
             },
+            {
+                id: 11,
+                title: "Tiktok downloader",
+                description: "TikTok Video Downloader (No Watermark) is a web-based tool that allows users to download TikTok videos quickly and easily without any watermark. Simply paste the video link, and the website will generate a clean, high-quality download link, perfect for offline viewing or content repurposing.",
+                image: "https://raw.githubusercontent.com/Enex-kblm/Tiktok-downloader/main/Screenshot%202025-06-09%20170643.png",
+                url: "https://tiktok-downloader-red.vercel.app/",
+                category: "website",
+                date: "2025-06-01"
+            },
         ];
         
         // Render the projects
