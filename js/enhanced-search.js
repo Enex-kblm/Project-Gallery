@@ -26,6 +26,8 @@ export class EnhancedSearch {
         this.bindEvents();
         this.generateSuggestions();
         this.setupKeyboardShortcuts();
+        
+        return this; // Return instance for chaining
     }
     
     createSearchElements() {

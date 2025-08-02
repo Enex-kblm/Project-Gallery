@@ -1,6 +1,11 @@
 // Mobile-specific search enhancements
 export class MobileSearchHandler {
     constructor(searchInstance) {
+        if (!searchInstance) {
+            console.warn('MobileSearchHandler: No search instance provided');
+            return;
+        }
+        
         this.searchInstance = searchInstance;
         this.isMobile = window.innerWidth <= 767;
         this.init();

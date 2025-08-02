@@ -125,7 +125,6 @@ export function createProjectCard(project) {
             <div class="project-info">
                 <div class="project-meta">
                     <span class="project-category">${project.category}</span>
-                    <span class="project-date">${formatDate(project.date)}</span>
                 </div>
                 <h3 class="project-title">${project.title}</h3>
                 <div class="description-container">
@@ -176,9 +175,4 @@ function toggleDescription(event) {
     const isExpanded = !description.classList.contains('truncated');
     description.classList.toggle('truncated');
     button.textContent = isExpanded ? 'Show more' : 'Show less';
-}
-
-function formatDate(dateString) {
-    const options = { year: 'numeric', month: 'short' };
-    return new Date(dateString).toLocaleDateString(undefined, options);
 }

@@ -321,7 +321,7 @@ input:focus, select:focus, button:focus {
 
 .project-meta { 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 1rem;
 }

@@ -20,8 +20,12 @@ async function initApp() {
         const mobileSearch = initEnhancedSearch(projects, '#searchBarMobile');
         
         // Initialize mobile-specific search handlers
-        new MobileSearchHandler(desktopSearch);
-        new MobileSearchHandler(mobileSearch);
+        if (desktopSearch) {
+            new MobileSearchHandler(desktopSearch);
+        }
+        if (mobileSearch) {
+            new MobileSearchHandler(mobileSearch);
+        }
         
         initFilter(projects, '#categoryFilter');
         initFilter(projects, '#categoryFilterMobile'); // Mobile filter
