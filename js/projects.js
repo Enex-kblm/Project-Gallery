@@ -11,6 +11,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/MH-DDoS/main/files/preview.png",
                 url: "https://github.com/Enex-kblm/MH-DDoS.git",
                 category: "too",
+                date: ""
             },
             {
                 id: 2,
@@ -19,7 +20,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/julian-cf/refs/heads/main/image/thumb.webp",
                 url: "https://github.com/Enex-kblm/julian-cf.git",
                 category: "wabot",
-                
+                date: ""
             },
             {
                 id: 3,
@@ -28,7 +29,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/DiG-L-wabot/main/DiG-L.png",
                 url: "https://github.com/Enex-kblm/DiG-L-wabot.git",
                 category: "wabot",
-                
+                date: ""
             },
             {
                 id: 4,
@@ -37,7 +38,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/hitung-usia-kamu/main/Screenshot%202025-06-06%20080031.png",
                 url: "https://enex-kblm.github.io/hitung-usia-kamu/",
                 category: "website",
-                
+                date: ""
             },
             {
                 id: 5,
@@ -46,7 +47,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/QRcode-generator/main/Screenshot%202025-06-06%20080350.png",
                 url: "https://qr-code-generator-liart-ten.vercel.app/",
                 category: "website",
-                
+                date: ""
             },
             {
                 id: 6,
@@ -55,7 +56,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/choice_picker/main/Screenshot%202025-06-06%20100734.png",
                 url: "https://enex-kblm.github.io/choice_picker/",
                 category: "website",
-                
+                date: ""
             },
             {
                 id: 7,
@@ -64,7 +65,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/tracking_game/main/PYtracking%20game.png",
                 url: "https://github.com/Enex-kblm/tracking_game.git",
                 category: "python",
-                
+                date: ""
             },
             {
                 id: 8,
@@ -73,7 +74,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/Chat-With-Python/main/chat%20with%20python.png",
                 url: "https://github.com/Enex-kblm/Chat-With-Python.git",
                 category: "python",
-                
+                date: ""
             },
             {
                 id: 9,
@@ -82,7 +83,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/Device-Information/main/Screenshot%202025-06-06%20105457.png",
                 url: "https://enex-kblm.github.io/Device-Information/",
                 category: "website",
-                
+                date: ""
             },
             {
                 id: 10,
@@ -91,7 +92,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/Check-Profesi/main/check-profesi.png",
                 url: "https://check-profesi.vercel.app/",
                 category: "website",
-                
+                date: ""
             },
             {
                 id: 11,
@@ -100,7 +101,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/Tiktok-downloader/main/Screenshot%202025-06-09%20170643.png",
                 url: "https://tiktok-downloader-red.vercel.app/",
                 category: "website",
-                
+                date: ""
             },
         ];
         
