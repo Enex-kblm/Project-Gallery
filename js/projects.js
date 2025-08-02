@@ -10,8 +10,7 @@ export async function loadProjects() {
                 description: "A customized version of the MH-DDoS tool originally developed by matrixTM, enhanced with a web-based user interface for easier interaction. This interface simplifies the configuration and execution of stress tests, making the tool more accessible for educational and testing purposes.",
                 image: "https://raw.githubusercontent.com/Enex-kblm/MH-DDoS/main/files/preview.png",
                 url: "https://github.com/Enex-kblm/MH-DDoS.git",
-                category: "tool",
-                date: "2025-06-01"
+                category: "too",
             },
             {
                 id: 2,
@@ -20,7 +19,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/julian-cf/refs/heads/main/image/thumb.webp",
                 url: "https://github.com/Enex-kblm/julian-cf.git",
                 category: "wabot",
-                date: "2025-06-01"
+                
             },
             {
                 id: 3,
@@ -29,7 +28,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/DiG-L-wabot/main/DiG-L.png",
                 url: "https://github.com/Enex-kblm/DiG-L-wabot.git",
                 category: "wabot",
-                date: "2025-06-01"
+                
             },
             {
                 id: 4,
@@ -38,7 +37,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/hitung-usia-kamu/main/Screenshot%202025-06-06%20080031.png",
                 url: "https://enex-kblm.github.io/hitung-usia-kamu/",
                 category: "website",
-                date: "2025-06-01"
+                
             },
             {
                 id: 5,
@@ -47,7 +46,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/QRcode-generator/main/Screenshot%202025-06-06%20080350.png",
                 url: "https://qr-code-generator-liart-ten.vercel.app/",
                 category: "website",
-                date: "2025-06-01"
+                
             },
             {
                 id: 6,
@@ -56,7 +55,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/choice_picker/main/Screenshot%202025-06-06%20100734.png",
                 url: "https://enex-kblm.github.io/choice_picker/",
                 category: "website",
-                date: "2025-06-01"
+                
             },
             {
                 id: 7,
@@ -65,7 +64,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/tracking_game/main/PYtracking%20game.png",
                 url: "https://github.com/Enex-kblm/tracking_game.git",
                 category: "python",
-                date: "2025-06-01"
+                
             },
             {
                 id: 8,
@@ -74,7 +73,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/Chat-With-Python/main/chat%20with%20python.png",
                 url: "https://github.com/Enex-kblm/Chat-With-Python.git",
                 category: "python",
-                date: "2025-06-01"
+                
             },
             {
                 id: 9,
@@ -83,7 +82,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/Device-Information/main/Screenshot%202025-06-06%20105457.png",
                 url: "https://enex-kblm.github.io/Device-Information/",
                 category: "website",
-                date: "2025-06-01"
+                
             },
             {
                 id: 10,
@@ -92,7 +91,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/Check-Profesi/main/check-profesi.png",
                 url: "https://check-profesi.vercel.app/",
                 category: "website",
-                date: "2025-06-01"
+                
             },
             {
                 id: 11,
@@ -101,7 +100,7 @@ export async function loadProjects() {
                 image: "https://raw.githubusercontent.com/Enex-kblm/Tiktok-downloader/main/Screenshot%202025-06-09%20170643.png",
                 url: "https://tiktok-downloader-red.vercel.app/",
                 category: "website",
-                date: "2025-06-01"
+                
             },
         ];
         
