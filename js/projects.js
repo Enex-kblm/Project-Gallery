@@ -103,6 +103,16 @@ export async function loadProjects() {
                 category: "website",
                 date: ""
             },
+            {
+                                id: 12,
+                                                title: "Bangun Ruang 3D",
+                                                                description: "Bangun Ruang 3D is an interactive educational website designed to help students understand three-dimensional geometry visually. Users can explore 3D shapes like cubes and rectangular prisms, view their diagonals and planes, and rotate or zoom the models in real time. The clean white-and-blue interface makes learning geometry intuitive and visually engaging, turning abstract spatial concepts into clear, interactive visuals.",
+                                                                                image: "https://raw.githubusercontent.com/Enex-kblm/Bangun-Ruang/refs/heads/main/public/thumbnail.png",
+                                                                                                url: "https://tiktok-downloader-red.vercel.app/",
+                                                                                                                category: "website",
+                                                                                                                                date: ""
+                                                                                                                                            },
+            }
         ];
         
         // Render the projects
